@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Min Portfolie Hjemmeside</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav class="fixed-top">
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">WebApp</label>
+            <ul >
+                <li >
+                    <a class="active" asp-area="" asp-page="/Index">Home</a>
+                </li>
+                <li >
+                    <a asp-area="" asp-page="/About">About</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-page="/Projects">Projects</a>
+                </li>
+                <li >
+                    <a asp-area="" asp-page="/Application">Application</a>
+                </li>
+                <li >
+                    <a asp-area="" asp-page="/Contact">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <div class="fixed-bottom">
+        <div class="footer">
+            <div class="inner_footer">
+                <div class="container text-center">
+                    <p>
+                        &copy; Copyright 2020
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+

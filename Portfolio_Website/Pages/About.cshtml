@@ -1,0 +1,33 @@
+﻿@page
+@model Portfolio_Website.Pages.AboutModel
+@{
+    ViewData["Title"] = "Portfolio Website";
+}
+
+
+<link rel="stylesheet" href="~/css/StyleSheet.css" />
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+<section style="width: 500px; height: 500px">
+
+    <div class="contain">
+
+       @foreach (var item in Model.abouts)
+        {
+            <div class="row">
+                <div class="col-sm-7">
+                    <h2 class="about-txt">@item.HeadingName</h2>
+                    <p class="about-txt">@item.Text</p>
+                
+                </div>
+                <div class="col-sm-5">
+                    <div class="img-wrap">
+                        <img src="@item.Image" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</section>

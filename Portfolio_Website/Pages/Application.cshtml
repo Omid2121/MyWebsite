@@ -1,0 +1,26 @@
+﻿@page
+@model Portfolio_Website.Pages.ApplicationModel
+@{
+    ViewData["Title"] = "Portfolio Website";
+}
+
+<link rel="stylesheet" href="~/css/StyleSheet.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<section style="width: 500px; height: 500px">
+
+    <div class="content-info">
+
+       @foreach (var item in Model.applications)
+        {
+            <div class="card">
+                <h3>@item.Name</h3>
+                <a href="@item.Link" class="card-icon @item.Logo" style="font-size:36px; background:none; color:red"></a>
+
+            </div>
+
+        }
+    </div>
+
+</section>

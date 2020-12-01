@@ -1,0 +1,25 @@
+﻿@page
+@model Portfolio_Website.Pages.ProjectsModel
+@{
+    ViewData["Title"] = "Portfolio Website";
+}
+
+<link rel="stylesheet" href="css/StyleSheet.css" />
+
+<section>
+    <div class="content-info">
+
+        @foreach (var item in Model.projects)
+        {
+
+            <div class="card2">
+                <img class="projImg" src="image/@item.Image" alt="Alternate Text" />
+                <h1>@item.Name</h1>
+                <p>@item.Text</p>
+                <a href="@item.DownloadBtn">Download</a>
+            </div>
+        }
+
+    </div>
+
+</section>

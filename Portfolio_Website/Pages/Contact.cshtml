@@ -1,0 +1,33 @@
+﻿@page
+@model Portfolio_Website.Pages.ContactModel
+@{
+    ViewData["Title"] = "Portfolio Website";
+}
+<link rel="stylesheet" href="~/css/StyleSheet.css" />
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+
+<section style="width: 500px; height: 500px">
+
+    <div class="content-info">
+
+       @foreach (var item in Model.contacts)
+        {
+            <div class="card">
+                <i class="card-icon @item.EmailLogo"></i>
+                <p>@item.Email</p>
+            </div>
+
+            <div class="card">
+                <i class="card-icon @item.PhoneLogo"></i>
+                <p>@item.Number</p>
+            </div>
+
+            <div class="card">
+                <i class="card-icon @item.AddressLogo"></i>
+                <p>@item.Address</p>
+            </div>
+        }
+
+    </div>
+</section>
